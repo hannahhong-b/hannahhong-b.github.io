@@ -1,0 +1,704 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Hannah Hong Profile Site</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Hannah Hong, data analytics student at Griffith University.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>/* Layout: white page, avatar hero, big green numerals; projects as compact rows
+   (numbers + one visual) with the full write-up folded away. Green and black only. */
+:root{
+  --bg:#ffffff; --fg:#111111; --muted:#5a635e; --line:#e4e9e5;
+  --green:#0f8a4a; --green2:#22b35e; --green3:#a8e6c0; --soft:#eafbf1; --lime:#65a30d;
+  --grad:linear-gradient(100deg,#047857 0%,#16a34a 45%,#65a30d 100%);
+  --d1:#0f8a4a; --d2:#22b35e; --d3:#b7c4bc; --neg:#111111;
+  --ava1:#eef6f0; --ava2:#dcecdf;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:108px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit}
+b{font-weight:700}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.topin{display:flex;align-items:center;gap:20px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:8px;font:600 15px var(--sans);text-decoration:none}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--green)}
+nav{display:flex;gap:22px;margin-left:auto}
+nav a{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--green)}
+.pill{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.08em;text-decoration:none;border:1px solid var(--fg);border-radius:999px;padding:6px 14px}
+.pill:hover{background:var(--green);border-color:var(--green);color:#fff}
+h1,h2,h3{font-family:var(--display);font-stretch:106%;text-wrap:balance;letter-spacing:-.02em;font-weight:600;margin:0}
+/* hero */
+.hero{padding-block:64px 24px}
+.heroin{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:56px;align-items:center}
+.avawrap{display:grid;place-items:center}
+.ava{width:100%;max-width:260px;height:auto}
+.heroin{grid-template-columns:minmax(0,250px) minmax(0,1fr)}
+@media (prefers-reduced-motion:no-preference){.ava{animation:bob 6s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-6px)}}}
+.herotext{min-width:0}
+.hello{font:400 18px var(--sans);margin:0 0 4px}
+h1{font-size:clamp(48px,8.4vw,100px);line-height:.95;font-weight:800;letter-spacing:-.035em;font-stretch:110%}
+.badge{display:inline-block;margin:14px 0 0;font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--green);border:1px solid var(--green);padding:4px 10px;border-radius:4px}
+.lede{font-size:clamp(18px,1.8vw,21px);line-height:1.5;max-width:44ch;margin:22px 0 0}
+.lede b{color:var(--green)}
+.lede.quiet{font-size:16px;color:var(--muted);margin-top:10px;max-width:56ch}
+.cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:26px}
+.btn{font:500 14px var(--sans);padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--fg);text-decoration:none;cursor:pointer}
+.btn:hover{border-color:var(--fg)}
+.btn.pri{background:var(--green);border-color:var(--green);color:#fff}
+.btn.pri:hover{background:var(--fg);border-color:var(--fg)}
+.chip{font:500 13px var(--sans);padding:8px 14px;border-radius:999px;color:var(--green);border:1px solid var(--green3)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:64px;padding-top:28px;border-top:1px solid var(--line)}
+.stat{display:flex;flex-direction:column;min-width:0}
+.hv{color:var(--green);font:800 clamp(40px,5.4vw,66px)/1 var(--display);font-stretch:108%;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.hk{font-size:14px;color:var(--muted);margin-top:8px;max-width:24ch}
+/* sections */
+.sec{padding-block:80px}
+.sec.line{border-top:1px solid var(--line)}
+.sh{display:grid;gap:10px;margin-bottom:36px;max-width:760px}
+.sh h2{font-size:clamp(30px,4vw,48px);line-height:1.04}
+.shp{margin:0;color:var(--muted)}
+.eyebrow{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--green);margin:0}
+.panel{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:20px;min-width:0}
+.ct{font:600 15px var(--sans);margin:0 0 12px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.unit{font:400 12px var(--mono);color:var(--muted)}
+.cc{font-size:12.5px;color:var(--muted);margin:10px 0 0}
+.chart{margin:0}
+.cbox{position:relative;height:240px;max-width:100%}
+/* how I work */
+.wsteps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.wstep{border-top:2px solid var(--green);padding-top:16px;min-width:0}
+.wn{font:500 12px var(--mono);color:var(--green)}
+.wstep h3{font-size:26px;margin:6px 0 6px}
+.wstep p{margin:0;font-size:15px;color:var(--muted)}
+.tools,.stack{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 0!important}
+.tools span,.stack span{font:500 12px var(--mono);color:var(--green);background:var(--soft);border-radius:999px;padding:3px 10px}
+/* projects */
+.proj{padding-block:40px;border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:0;padding-top:0}
+.phead{max-width:760px;margin-bottom:20px}
+.tag{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--green)}
+.phead h3{font-size:clamp(24px,3vw,34px);line-height:1.1;margin-top:8px}
+.sub{color:var(--muted);margin:8px 0 0;font-size:17px}
+.pbody{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:28px;align-items:start}
+.pleft,.pright{min-width:0}
+.findings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.fd{border:1px solid var(--line);border-radius:14px;padding:14px;min-width:0}
+.fv{font:800 clamp(20px,2.2vw,26px)/1.1 var(--display);color:var(--green);letter-spacing:-.02em;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.fl{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.45}
+.take{margin:18px 0 0;font-size:16px;line-height:1.55}
+.take.sm{font-size:14.5px;margin-top:14px}
+.tk{display:block;font:500 11px var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:4px}
+.take b{color:var(--green)}
+.shot{margin:0}
+.imgwrap{border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.imgwrap img{display:block;width:100%;height:auto;max-width:100%}
+.more{margin-top:20px}
+.more summary{cursor:pointer;display:inline-flex;align-items:center;gap:8px;font:500 14px var(--sans);color:var(--green);padding:8px 14px;border:1px solid var(--green3);border-radius:999px;list-style:none}
+.more summary::-webkit-details-marker{display:none}
+.more summary::after{content:"+";font-family:var(--mono)}
+.more[open] summary::after{content:"−"}
+.more summary:hover{border-color:var(--green)}
+.morein{margin-top:20px;max-width:900px}
+.morein h4,.crit h4{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin:22px 0 6px}
+.morein p{margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:12px 32px;margin:0;font-size:14px}
+.meta dt{font:500 11px var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.meta dd{margin:2px 0 0}
+.steps{padding-left:22px;margin:0;display:grid;gap:4px;font-size:15px}
+.steps li::marker{font:500 13px var(--mono);color:var(--green)}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px;margin-top:22px}
+.code{margin:20px 0 0;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.code figcaption{display:flex;justify-content:space-between;gap:12px;padding:8px 14px;font-size:12.5px;color:var(--muted);border-bottom:1px solid var(--line)}
+.lang{font-family:var(--mono)}
+.code pre{margin:0;padding:14px;overflow-x:auto;font:13px/1.6 var(--mono);background:var(--soft)}
+.crit{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:0 32px}
+.crit ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:15px}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 48px}
+.sg h4{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin:16px 0 4px}
+.sg ul{list-style:none;padding:0;margin:0}
+.sg li{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;padding:9px 0;border-bottom:1px solid var(--line)}
+.sk{font-weight:600}
+.sn{font-size:13px;color:var(--muted)}
+.evs{margin-left:auto;display:flex;gap:4px}
+.ev{font:500 11px var(--mono);width:24px;height:24px;display:grid;place-items:center;border:1px solid var(--green3);color:var(--green);border-radius:50%;text-decoration:none}
+.ev:hover{background:var(--green);color:#fff}
+/* running */
+.runbox{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:20px;align-items:start}
+.rkpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.rk{border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;min-width:0}
+.rv{font:800 24px/1.1 var(--display);color:var(--green);font-variant-numeric:tabular-nums}
+.rl{font-size:14px;margin-top:4px}
+.rs{font-size:12px;color:var(--muted)}
+/* background + contact */
+.bg2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}
+.tl{list-style:none;padding:0;margin:12px 0 0}
+.xp{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.xd{font:12px var(--mono);color:var(--muted);padding-top:3px}
+.xb h4{margin:0;font-size:16px;font-weight:600}
+.xl{margin:0;font-size:14px;color:var(--green)}
+.xs{margin:6px 0 0;font-size:14.5px;color:var(--muted)}
+.contact h2{font-size:clamp(30px,4.6vw,54px);line-height:1.02;max-width:20ch}
+.contact .lede{margin-top:12px;color:var(--muted)}
+.mail{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:24px}
+.addr{font:15px var(--mono);user-select:all;word-break:break-all;border:1px solid var(--line);padding:9px 14px;border-radius:999px}
+.small{font-size:13px;color:var(--muted);margin:28px 0 0}
+@media (max-width:900px){
+  .wsteps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pbody,.runbox{grid-template-columns:minmax(0,1fr)}
+  .skills{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:820px){
+  nav{display:none}.pill{margin-left:auto}
+  .heroin{grid-template-columns:minmax(0,1fr);gap:20px}
+  .ava{max-width:150px}.avawrap{justify-items:start}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:40px}
+  .hero{padding-block:32px 12px}.sec{padding-block:56px}
+  .bg2{grid-template-columns:minmax(0,1fr);gap:32px}
+  .xp{grid-template-columns:minmax(0,1fr);gap:2px}
+}
+@media (max-width:520px){
+  .wsteps{grid-template-columns:minmax(0,1fr)}
+  .findings{grid-template-columns:minmax(0,1fr)}
+}
+
+/* runner: a small character jogging back and forth along a lane under the header */
+.track{position:relative;height:42px;overflow:hidden}
+.lane-h .runner{position:absolute;left:0;bottom:0}
+.runner{position:absolute;width:34px;height:41px;transform-origin:50% 50%;will-change:transform}
+.runner svg{display:block;overflow:visible}
+.runner .legA,.runner .legB{transform-origin:19px 28px}
+.runner .armA,.runner .armB{transform-origin:21px 17px}
+.lane-h .odo{position:absolute;right:max(16px,env(safe-area-inset-right,0px));top:12px;font:500 11px var(--mono);color:var(--muted);font-variant-numeric:tabular-nums;background:var(--bg);padding:0 6px}
+.lane-h .puff{bottom:1px}
+.puff{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--green3);pointer-events:none}
+@media (prefers-reduced-motion:no-preference){
+  .runner .legA{animation:swing .42s ease-in-out infinite alternate}
+  .runner .legB{animation:swing .42s ease-in-out infinite alternate-reverse}
+  .runner .armA{animation:arm .42s ease-in-out infinite alternate-reverse}
+  .runner .armB{animation:arm .42s ease-in-out infinite alternate}
+  .runner .body{animation:bounce .21s ease-in-out infinite alternate}
+  .runner .pony{animation:pony .21s ease-in-out infinite alternate;transform-origin:20px 9px}
+  .puff{animation:puff .7s ease-out forwards}
+  @keyframes swing{from{transform:rotate(32deg)}to{transform:rotate(-32deg)}}
+  @keyframes arm{from{transform:rotate(40deg)}to{transform:rotate(-40deg)}}
+  @keyframes bounce{from{transform:translateY(0)}to{transform:translateY(-2px)}}
+  @keyframes pony{from{transform:rotate(-12deg)}to{transform:rotate(14deg)}}
+  @keyframes puff{from{opacity:.9;transform:scale(.6)}to{opacity:0;transform:translateY(-6px) scale(1.6)}}
+}
+@media (prefers-reduced-motion:reduce){.odo{display:none}}
+
+.langs{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 0}
+.langs span{font:500 13px var(--mono);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:3px 10px}
+.langs span:nth-child(-n+2){color:#fff;background:var(--green);border-color:var(--green)}
+.code.win{margin:0;border:1px solid #1d2a22;border-radius:14px;overflow:hidden;background:#13201a}
+.wbar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#0e1813}
+.wbar i{width:10px;height:10px;border-radius:50%;background:#2f4a3b}
+.wbar .fn{margin-left:8px;font:500 12px var(--mono);color:#9fc7ad}
+.code.win pre{background:transparent;color:#e7efe9;padding:16px;margin:0;overflow-x:auto;font:13px/1.65 var(--mono)}
+.code.win .cc{color:#9fc7ad;margin:0;padding:0 16px 14px}
+.hljs-keyword,.hljs-built_in,.hljs-literal{color:#8fd6a8}
+.hljs-string{color:#e9e2a8}
+.hljs-number{color:#f2b38a}
+.hljs-comment{color:#7d9887;font-style:italic}
+.hljs-title,.hljs-title.function_,.hljs-meta{color:#b7e3ff}
+.hljs-operator,.hljs-punctuation{color:#cfd9d2}
+@media (max-width:1000px){.wsteps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* vertical lane: runner goes up and down a line in the right-hand margin on wide screens */
+.vlane{display:none}
+@media (min-width:1240px){
+  .lane-h{display:none}
+  .vlane{display:block;position:fixed;z-index:4;top:calc(env(safe-area-inset-top,0px) + 96px);bottom:24px;right:calc((100vw - 1120px)/4 - 22px);width:44px;pointer-events:none;
+    background:linear-gradient(var(--line),var(--line)) 4px 0/1px 100% no-repeat}
+  .vlane .runner{left:8px;top:0}
+  .vlane .puff{left:20px}
+  .vlane .odo{position:absolute;left:14px;bottom:0;writing-mode:vertical-rl;transform:rotate(180deg);font:500 11px var(--mono);color:var(--muted);font-variant-numeric:tabular-nums;background:var(--bg);padding:6px 0}
+}
+/* core skills spotlight */
+.core{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.corecard{border:1.5px solid var(--green);border-radius:20px;padding:24px;min-width:0}
+.cch{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:14px}
+.ccn{font:800 clamp(34px,4.4vw,52px)/1 var(--display);font-stretch:108%;letter-spacing:-.03em;color:var(--green)}
+.ccl{font:500 11px var(--mono);text-transform:uppercase;letter-spacing:.1em;color:#fff;background:var(--green);border-radius:999px;padding:4px 10px}
+.ccp{margin:0;padding-left:18px;display:grid;gap:6px;font-size:15.5px}
+.ccp b{color:var(--green)}
+.cce{display:flex;align-items:center;gap:6px;margin:16px 0 0;font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+@media (max-width:820px){.core{grid-template-columns:minmax(0,1fr)}}
+
+/* brighter green: gradient numerals and buttons */
+.hv,.fv,.rv,.kv,.gv,.ccn{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.btn.pri{background:var(--grad);border-color:transparent}
+.btn.pri:hover{background:var(--fg)}
+.ccl,.langs span:nth-child(-n+2){background:var(--grad);border-color:transparent}
+.corecard{border-color:transparent;background:linear-gradient(#fff,#fff) padding-box,var(--grad) border-box;border:2px solid transparent}
+.wstep{border-top:0;position:relative}
+.wstep::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;border-radius:3px;background:var(--grad)}
+.fd{transition:border-color .3s}
+.fd:hover{border-color:var(--green3)}
+.dot{background:var(--grad)}
+.code.win{background:#0d2016;border-color:#123222}
+.wbar{background:#0a1a11}
+.wbar .fn{color:#86efac}
+.hljs-keyword,.hljs-built_in,.hljs-literal{color:#4ade80}
+.code.win .cc{color:#86efac}
+
+/* tech layer: grid paper, terminal prompts, framed avatar */
+.hero{position:relative;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:32px 32px;background-position:-1px -1px}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 60% 40%,transparent 30%,var(--bg) 78%)}
+.hero>.wrap{position:relative;z-index:1}
+.brand{font:500 15px var(--mono)}
+.br2{color:var(--muted)}
+.hello{font:500 16px var(--mono);color:var(--green)}
+.pr{color:var(--green);font-family:var(--mono)}
+.caret{display:inline-block;width:9px;height:1.1em;vertical-align:-3px;margin-left:3px;background:var(--green2)}
+@media (prefers-reduced-motion:no-preference){.caret{animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}}
+.badge{display:inline-flex;align-items:center;gap:8px;text-transform:none;letter-spacing:.02em;font-size:13px;background:var(--bg)}
+.live{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px #22c55e33}
+@media (prefers-reduced-motion:no-preference){.live{animation:pulse 2s ease-out infinite}@keyframes pulse{0%{box-shadow:0 0 0 0 #22c55e66}100%{box-shadow:0 0 0 10px #22c55e00}}}
+.eyebrow .cm{color:var(--muted)}
+.frame{position:relative;width:100%;max-width:250px;padding:22px 24px 34px;background:var(--bg);border:1px dashed var(--green3);border-radius:4px}
+.memoji{display:block;width:100%;height:auto;max-width:100%}
+@media (prefers-reduced-motion:no-preference){.memoji{animation:bob 6s ease-in-out infinite}}
+.cn{position:absolute;width:14px;height:14px;border:2px solid var(--green)}
+.cn.c1{top:-2px;left:-2px;border-right:0;border-bottom:0}.cn.c2{top:-2px;right:-2px;border-left:0;border-bottom:0}
+.cn.c3{bottom:-2px;left:-2px;border-right:0;border-top:0}.cn.c4{bottom:-2px;right:-2px;border-left:0;border-top:0}
+.scan{position:absolute;left:8px;right:8px;top:20px;height:2px;background:linear-gradient(90deg,transparent,#22c55e,transparent);opacity:.7}
+@media (prefers-reduced-motion:no-preference){.scan{animation:scan 4s ease-in-out infinite}@keyframes scan{0%,100%{top:20px}50%{top:calc(100% - 36px)}}}
+@media (prefers-reduced-motion:reduce){.scan{display:none}}
+.ftag{position:absolute;left:10px;bottom:8px;font:500 10.5px var(--mono);color:var(--muted)}
+.addr{font-family:var(--mono)}
+@media (max-width:820px){.frame{max-width:170px;padding:14px 16px 28px}}
+</style>
+<header class="top"><div class="wrap topin">
+  <a class="brand" href="#top"><span class="dot"></span><span>hannah<span class="br2">.hong</span></span></a>
+  <nav aria-label="Sections"><a href="#core">Core skills</a><a href="#work">Projects</a><a href="#skills">Skills</a><a href="#running">Running</a></nav>
+  <a class="pill" href="#contact">Contact</a>
+</div><div class="track lane-h" aria-hidden="true"><div class="runner"><svg viewBox="0 0 40 48" width="34" height="41">
+<g class="body">
+<ellipse class="pony" cx="15" cy="9" rx="5" ry="2.6" fill="#2b1d18"/>
+<g class="armB"><path d="M21 17 L16 24 L20 28" stroke="#d9a888" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g class="legB"><path d="M19 28 L17 37 L14 45" stroke="#2b2b2b" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M21 15 L19 29" stroke="var(--green)" stroke-width="7" stroke-linecap="round"/>
+<g class="legA"><path d="M19 28 L22 37 L20 45" stroke="#111" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g class="armA"><path d="M21 17 L26 23 L30 20" stroke="#efc3a2" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<circle cx="23" cy="9" r="5.2" fill="#f6d2b6"/>
+<path d="M17.6 9 C17.6 3.5 27 2.5 28.3 7.5 C25 6 21 6.5 17.6 9 Z" fill="#2b1d18"/>
+</g></svg></div><span class="odo" title="Distance at my threshold pace (4:41/km) for the time you've had this page open">0.00 km at 4:41/km</span></div></header>
+<div class="vlane lane-v" aria-hidden="true"><div class="runner"><svg viewBox="0 0 40 48" width="34" height="41">
+<g class="body">
+<ellipse class="pony" cx="15" cy="9" rx="5" ry="2.6" fill="#2b1d18"/>
+<g class="armB"><path d="M21 17 L16 24 L20 28" stroke="#d9a888" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g class="legB"><path d="M19 28 L17 37 L14 45" stroke="#2b2b2b" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<path d="M21 15 L19 29" stroke="var(--green)" stroke-width="7" stroke-linecap="round"/>
+<g class="legA"><path d="M19 28 L22 37 L20 45" stroke="#111" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g class="armA"><path d="M21 17 L26 23 L30 20" stroke="#efc3a2" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<circle cx="23" cy="9" r="5.2" fill="#f6d2b6"/>
+<path d="M17.6 9 C17.6 3.5 27 2.5 28.3 7.5 C25 6 21 6.5 17.6 9 Z" fill="#2b1d18"/>
+</g></svg></div><span class="odo">0.00 km at 4:41/km</span></div>
+<main id="top">
+<section class="hero"><div class="wrap heroin">
+  <div class="avawrap"><div class="frame"><span class="cn c1"></span><span class="cn c2"></span><span class="cn c3"></span><span class="cn c4"></span><img class="memoji" src="assets/memoji.png" alt="Hannah's Memoji avatar wearing a green beanie" width="355" height="560"><span class="scan" aria-hidden="true"></span><span class="ftag">hannah.png · 355×560</span></div></div>
+  <div class="herotext">
+    <p class="hello"><span class="pr">&gt;</span> <span id="typed" data-text="Hello, my name is">Hello, my name is</span><span class="caret" aria-hidden="true"></span></p>
+    <h1>Hannah Hong</h1>
+    <p class="badge"><span class="live"></span>data_analytics @ griffith_university · brisbane</p>
+    <p class="lede">I find what is driving the numbers. I clean and analyse data in <b>Python</b>, model and present it in <b>Power BI</b>, and write it up so a manager can act on it in two minutes.</p>
+    <p class="langs"><span>Python</span><span>Power BI</span><span>R</span><span>SQL</span><span>JavaScript</span><span>DAX</span></p>
+    <p class="lede quiet">Three years on a busy coffee machine taught me to work fast and still get the order right. I try to treat numbers the same way.</p>
+    <div class="cta">
+      <a class="btn pri" href="#work">See my projects</a>
+      <a class="btn" href="https://www.linkedin.com/in/hannah-hong-b89993429/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <span class="chip">Available full-time from August 2027</span>
+    </div>
+  </div>
+</div>
+<div class="wrap"><div class="stats"><div class="stat"><span class="hv">$135K</span><span class="hk">in lost profit traced to one discount policy in Power BI</span></div><div class="stat"><span class="hv">12,000</span><span class="hk">YouTube comments analysed with text mining and ML in R</span></div><div class="stat"><span class="hv">9,994</span><span class="hk">order lines cleaned and modelled in a star schema</span></div><div class="stat"><span class="hv">548</span><span class="hk">survey responses summarised for a justice study</span></div></div></div>
+</section>
+
+<section id="core" class="sec line"><div class="wrap">
+  <div class="sh"><p class="eyebrow"><span class="cm">//</span> core_skills</p><h2>Python and Power BI</h2><p class="shp">The two tools I reach for first, and the projects that show them.</p></div>
+  <div class="core">
+    <div class="corecard"><div class="cch"><span class="ccn">Python</span><span class="ccl">Strongest</span></div>
+      <ul class="ccp"><li><b>NumPy, SciPy and matplotlib</b> for descriptive stats, regression and plots</li><li>Found an <b>r = 0.89</b> link between study time and marks</li><li>Cleaning and validating CSV data before analysis</li><li>Tested code: <b>100%</b> branch coverage with pytest</li></ul>
+      <p class="cce">Projects <a class="ev" href="#study-regression">C</a><a class="ev" href="#xpower-planning">F</a><a class="ev" href="#tested-code">G</a></p></div>
+    <div class="corecard"><div class="cch"><span class="ccn">Power BI</span><span class="ccl">Strongest</span></div>
+      <ul class="ccp"><li><b>2 reports</b> built end to end, from messy files to dashboard</li><li>Power Query cleaning, star schema modelling</li><li>DAX measures, including calendar and financial-year YTD</li><li>Found a <b>$135K</b> discount problem and a silently wrong total</li></ul>
+      <p class="cce">Projects <a class="ev" href="#profit-leakage">A</a><a class="ev" href="#sales-report">D</a></p></div>
+  </div>
+</div></section>
+
+<section id="how" class="sec line"><div class="wrap">
+  <div class="sh"><p class="eyebrow"><span class="cm">//</span> how_i_work</p><h2>From raw data to a decision</h2><p class="shp">The same five steps in every project, whatever the tool.</p></div>
+  <ol class="wsteps"><li class="wstep"><span class="wn">01</span><h3>Collect</h3><p>Pull data from APIs and files, and cache it so re-runs don't hit the API again.</p><p class="tools"><span>Python</span><span>R</span><span>YouTube Data API</span></p></li><li class="wstep"><span class="wn">02</span><h3>Clean</h3><p>Check IDs, duplicates and types before I trust anything.</p><p class="tools"><span>Power Query</span><span>Python</span><span>dplyr</span></p></li><li class="wstep"><span class="wn">03</span><h3>Analyse</h3><p>Descriptive stats, regression, text mining and simple models.</p><p class="tools"><span>Python</span><span>NumPy</span><span>SciPy</span><span>R</span></p></li><li class="wstep"><span class="wn">04</span><h3>Visualise</h3><p>Model the data and build dashboards that answer one question each.</p><p class="tools"><span>Power BI</span><span>DAX</span><span>matplotlib</span></p></li><li class="wstep"><span class="wn">05</span><h3>Recommend</h3><p>Turn findings into a decision and a way to check it worked.</p><p class="tools"><span>Reports</span><span>Monitoring plans</span></p></li></ol>
+</div></section>
+
+<section id="work" class="sec line"><div class="wrap">
+  <div class="sh"><p class="eyebrow"><span class="cm">//</span> projects</p><h2>Eight projects, analysis first</h2><p class="shp">A to E are data analysis. F to H show the code behind the tools. Open any project for the method, extra charts and what I'd change.</p></div>
+  <article class="proj" id="profit-leakage">
+<div class="phead"><span class="tag">A · Power BI</span><h3>Why profit stalled while sales grew 51%</h3><p class="sub">Sales were up 51% but profit wasn&#x27;t moving. I went looking for where it leaked.</p></div>
+<div class="pbody"><div class="pleft">
+<div class="findings"><div class="fd"><div class="fv">-$135.4K</div><div class="fl">lost on 1,393 lines discounted above 20%, equal to 47% of total profit</div></div><div class="fd"><div class="fv">2.5%</div><div class="fl">Furniture margin, against 17.0% for Office Supplies and 17.4% for Technology</div></div><div class="fd"><div class="fv">12.5% → 18.4%</div><div class="fl">modelled margin if discounts above 20% are capped</div></div></div>
+<p class="take"><span class="tk">What I found</span>Every discount above 20% lost money. Capping it would take margin from <b>12.5% to 18.4%</b>.</p>
+<p class="stack"><span>Power BI</span> <span>Power Query</span> <span>DAX</span> <span>Star schema</span></p>
+</div><div class="pright"><figure class="shot panel"><div class="imgwrap"><img src="assets/dashboard.jpg" alt="Power BI dashboard with KPI cards, slicers, sales and profit trend, profit by sub-category, discount band, region and segment" loading="lazy"></div><figcaption class="cc">The published dashboard. Slicers on the left filter every visual.</figcaption></figure></div></div>
+<details class="more"><summary>Read the full write-up</summary><div class="morein">
+<dl class="meta"><div><dt>Course</dt><dd>2030AFE Business Intelligence · 2026</dd></div><div><dt>My role</dt><dd>Sole analyst: data cleaning, model, DAX, dashboard and report</dd></div><div><dt>Data</dt><dd>Retail orders, 2014 to 2017 · 9,994 order lines · 5,009 orders · 793 customers</dd></div></dl>
+<h4>The question</h4><p>Sales rose from $484K in 2014 to $733K in 2017, but profit margin stayed around 12 to 13% and slipped in 2017. The sales director asked where profit was being lost, why, and what could fix it without hurting growth.</p>
+<h4>What I did</h4><ol class="steps"><li>Cleaned the source workbook in Power Query: removed header rows, resolved duplicate postal codes and product IDs, trimmed names and fixed data types</li><li>Modelled a star schema with one sales fact table and five dimensions (customer, region, product, order, date)</li><li>Wrote DAX measures for sales, profit, margin, average discount and loss amount, plus a discount-band column</li><li>Worked from what happened, to why, to what to do, cross-checking each finding with Year, Region, Category, Segment and Ship Mode slicers</li><li>Turned the findings into five decisions with evidence, expected impact and a monitoring plan</li></ol>
+<div class="mgrid"><figure class="panel chart "><figcaption class="ct">Sales grew, margin stayed flat</figcaption><div class="cbox"><canvas id="ch-profit-leakage-0" role="img" aria-label="Sales grew, margin stayed flat"></canvas></div><p class=cc>Figure 1 of the report, rebuilt from its values. Source: 2030AFE report, Figure 1.</p></figure><figure class="panel chart "><figcaption class="ct">Profit by discount band ($K)</figcaption><div class="cbox"><canvas id="ch-profit-leakage-1" role="img" aria-label="Profit by discount band ($K)"></canvas></div><p class=cc>Margins by band: 29.5%, 11.9%, -15.3%, -77.4%. Source: 2030AFE report, Figure 3.</p></figure><figure class="panel chart "><figcaption class="ct">Six largest loss-making states ($K)</figcaption><div class="cbox"><canvas id="ch-profit-leakage-2" role="img" aria-label="Six largest loss-making states ($K)"></canvas></div><p class=cc>Combined loss of $84.9K. Source: 2030AFE report, Figure 4.</p></figure><figure class="shot panel"><div class="imgwrap"><img src="assets/star-schema.png" alt="Power BI model view showing Fact_Sales joined to Dim_Product, Dim_Date, Dim_Region, Dim_Order and Dim_Customer" loading="lazy"></div><figcaption class="cc">Star schema in the model view: one fact table, five dimensions, technical keys hidden from report users.</figcaption></figure></div>
+<div class="crit">
+<div><h4>Limits</h4><ul><li>No freight or warehousing costs in the data, so true product margin is unknown</li><li>The scenario assumes retained sales are unaffected by removing deep discounts</li></ul></div>
+<div><h4>If I did it again</h4><ul><li>Pilot the 20% cap in Texas and Illinois for a quarter and compare against other regions</li><li>Add cost and discount-reason fields to the model</li></ul></div>
+</div></div></details>
+</article><article class="proj" id="listening-to-fans">
+<div class="phead"><span class="tag">B · R</span><h3>Listening to 12,000 fans</h3><p class="sub">I pulled 12,000 YouTube comments through the API and compared three fan bases in R.</p></div>
+<div class="pbody"><div class="pleft">
+<div class="findings"><div class="fd"><div class="fv">103 of 9,581</div><div class="fl">accounts commented on more than one artist, so the fan bases barely overlap</div></div><div class="fd"><div class="fv">16.2%</div><div class="fl">of Olivia Rodrigo&#x27;s network links are replies, the most conversational audience</div></div><div class="fd"><div class="fv">46.8% vs 33.8%</div><div class="fl">decision-tree accuracy against a guess-the-largest-class baseline</div></div></div>
+<p class="take"><span class="tk">What I found</span>The most useful find came from cleaning: one account had posted the same lyrics <b>16 times</b> and was skewing the top words.</p>
+<p class="stack"><span>R</span> <span>YouTube Data API</span> <span>igraph</span> <span>tidytext</span> <span>rpart</span> <span>LDA</span> <span>Power BI</span></p>
+</div><div class="pright"><figure class="code win"><div class="wbar"><i></i><i></i><i></i><span class="fn">analysis.R</span></div><pre><code class="lang-r">unique_actors &lt;- comments %&gt;%
+  group_by(Artist) %&gt;%
+  summarise(comments = n(),
+            unique_actors = n_distinct(AuthorChannelID)) %&gt;%
+  mutate(comments_per_actor = round(comments / unique_actors, 2))
+
+cross_artist &lt;- comments %&gt;%
+  distinct(AuthorChannelID, Artist) %&gt;%
+  count(AuthorChannelID) %&gt;%
+  filter(n &gt;= 2)</code></pre><figcaption class="cc">Counting unique accounts and cross-artist commenters</figcaption></figure></div></div>
+<details class="more"><summary>Read the full write-up</summary><div class="morein">
+<dl class="meta"><div><dt>Course</dt><dd>3032ICT Big Data &amp; Social Media Analytics · Trimester 2, 2026</dd></div><div><dt>My role</dt><dd>Data collection, cleaning, analysis in R and Power BI dashboard</dd></div><div><dt>Data</dt><dd>Comments and replies from nine official music videos · 12,000 rows · 9,581 unique accounts</dd></div></dl>
+<h4>The question</h4><p>What are fans saying about Taylor Swift, Billie Eilish and Olivia Rodrigo, how do those conversations differ, and what can a label do with that knowledge?</p>
+<h4>What I did</h4><ol class="steps"><li>Validated every video ID against the API before collecting, which caught one wrong ID</li><li>Collected whole comment threads to 4,000 rows per artist so no reply lost its parent comment, and cached raw data so re-runs don&#x27;t call the API</li><li>Built actor networks and ranked accounts with PageRank, degree, betweenness and closeness; found communities with Girvan-Newman</li><li>Cleaned text with one shared function, then ran term frequency, bigram networks, sentiment (syuzhet, NRC) and LDA topic models</li><li>Trained a decision tree to predict the artist from a comment, with a fixed seed and a 70/30 split</li><li>Exported tidy CSVs to a two-page Power BI dashboard for the manager</li></ol>
+<div class="mgrid"><figure class="panel chart "><figcaption class="ct">Comment polarity by artist (%)</figcaption><div class="cbox"><canvas id="ch-listening-to-fans-0" role="img" aria-label="Comment polarity by artist (%)"></canvas></div><p class=cc>syuzhet polarity on comments with emojis converted to words. Source: Big Data report, section 9.</p></figure><figure class="panel chart "><figcaption class="ct">Repeat commenting: comments per unique account</figcaption><div class="cbox"><canvas id="ch-listening-to-fans-1" role="img" aria-label="Repeat commenting: comments per unique account"></canvas></div><p class=cc>A ratio near 1 means a broadcast audience rather than a community. Source: Big Data report, section 4.</p></figure><figure class="shot panel"><div class="imgwrap"><img src="assets/communities.jpg" alt="Girvan-Newman community plot of Olivia Rodrigo commenters, many small coloured clusters" loading="lazy"></div><figcaption class="cc">Girvan-Newman communities among Olivia Rodrigo&#x27;s 255 most connected commenters. Modularity 0.96: each community is essentially one reply thread.</figcaption></figure></div>
+<div class="crit">
+<div><h4>Limits</h4><ul><li>The API returns newest comments first, so the sample reflects 2026 activity, not reaction at release</li><li>Older videos have had longer to collect comments; videos weren&#x27;t matched by age</li><li>Lexicon sentiment misses sarcasm and music slang</li></ul></div>
+<div><h4>If I did it again</h4><ul><li>Remove duplicate posts and add language detection before text mining</li><li>Use Louvain to analyse the full network instead of the top 300 actors</li></ul></div>
+</div></div></details>
+</article><article class="proj" id="study-regression">
+<div class="phead"><span class="tag">C · Python</span><h3>Does study time predict marks?</h3><p class="sub">A small Python lab: describe the data, plot it, fit a line, then test the prediction two ways.</p></div>
+<div class="pbody"><div class="pleft">
+<div class="findings"><div class="fd"><div class="fv">r = 0.89</div><div class="fl">strong positive correlation between hours and marks</div></div><div class="fd"><div class="fv">+6.4</div><div class="fl">marks for each extra hour of study per week, from the fitted slope</div></div><div class="fd"><div class="fv">66.9</div><div class="fl">predicted mark at 6.7 hours from the regression line</div></div></div>
+<p class="take"><span class="tk">What I found</span>Study time explained about <b>78% of the variation</b> in marks, but twelve students is too few to lean on it.</p>
+<p class="stack"><span>Python</span> <span>NumPy</span> <span>SciPy</span> <span>matplotlib</span> <span>Linear regression</span></p>
+</div><div class="pright"><figure class="panel chart "><figcaption class="ct">Hours studied vs marks, with fitted line</figcaption><div class="cbox"><canvas id="ch-study-regression-0" role="img" aria-label="Hours studied vs marks, with fitted line"></canvas></div><p class=cc>Rebuilt from the lab data. R² = 0.78, n = 12. Source: lab10.py.</p></figure></div></div>
+<details class="more"><summary>Read the full write-up</summary><div class="morein">
+<dl class="meta"><div><dt>Course</dt><dd>Engineering computing (Python) · Trimester 2, 2026</dd></div><div><dt>My role</dt><dd>Sole analyst</dd></div><div><dt>Data</dt><dd>Study hours and marks · 12 students · 2 variables</dd></div></dl>
+<h4>The question</h4><p>Twelve students logged weekly study hours and their marks. Is there a relationship, and what mark would we expect from 6.7 hours a week?</p>
+<h4>What I did</h4><ol class="steps"><li>Wrote a describe_data() function for mean, median and standard deviation</li><li>Compared the two variables with box plots, then a scatter plot</li><li>Fitted a least-squares line with np.polyfit and drew it over the points</li><li>Predicted the mark for 6.7 hours with the regression line and with linear interpolation, and compared the two</li></ol>
+<div class="mgrid"><figure class="code win"><div class="wbar"><i></i><i></i><i></i><span class="fn">lab10.py</span></div><pre><code class="lang-python">slope, intercept = np.polyfit(hours_studied, marks_achieved, 1)
+print(f&quot;y = {slope:.4f}x + {intercept:.4f}&quot;)
+
+hours_predict = 6.7
+mark_regression = slope * hours_predict + intercept
+mark_interpolation = np.interp(hours_predict, hours_studied, marks_achieved)</code></pre><figcaption class="cc">Fitting the line and predicting a mark two ways</figcaption></figure></div>
+<div class="crit">
+<div><h4>Limits</h4><ul><li>Twelve students is a very small sample</li><li>Correlation doesn&#x27;t show that studying more causes higher marks</li></ul></div>
+<div><h4>If I did it again</h4><ul><li>Sort the hours before calling np.interp, which expects increasing x values</li><li>Add a confidence interval around the prediction</li></ul></div>
+</div></div></details>
+</article><article class="proj" id="sales-report">
+<div class="phead"><span class="tag">D · Power BI</span><h3>The total that was quietly wrong</h3><p class="sub">A five-page Power BI sales report with a total that didn&#x27;t add up.</p></div>
+<div class="pbody"><div class="pleft">
+<div class="findings"><div class="fd"><div class="fv">5 pages</div><div class="fl">of interactive reporting with drill-down and drill-through</div></div><div class="fd"><div class="fv">CY + FY</div><div class="fl">YTD measures, so the report matches both calendar and Australian financial year reporting</div></div><div class="fd"><div class="fv">1 root cause</div><div class="fl">found for a wrong total: a hidden slicer filter, now documented</div></div></div>
+<p class="take"><span class="tk">What I found</span>My DAX was fine. A slicer on the same page was <b>quietly filtering the data</b>. I fixed it and documented it.</p>
+<p class="stack"><span>Power BI</span> <span>Power Query</span> <span>DAX</span> <span>Time intelligence</span></p>
+</div><div class="pright"></div></div>
+<details class="more"><summary>Read the full write-up</summary><div class="morein">
+<dl class="meta"><div><dt>Course</dt><dd>Power BI coursework · 2026</dd></div><div><dt>My role</dt><dd>Sole developer</dd></div><div><dt>Data</dt><dd>Sales fact table with date, product, territory and customer dimensions</dd></div></dl>
+<h4>The question</h4><p>Build a sales report management can drill into, from messy source files, and make sure every total on it can be trusted.</p>
+<h4>What I did</h4><ol class="steps"><li>Cleaned the source files in Power Query: removed junk header rows, split combined columns and unpivoted wide data</li><li>Modelled a star schema linking the sales fact table to date, product, territory and customer tables</li><li>Wrote DAX measures including calendar-year and financial-year YTD totals</li><li>Added slicers, drill-down and drill-through across five pages</li><li>Traced a matrix total that didn&#x27;t reconcile to a slicer on the same page silently filtering the data, fixed it and documented it</li></ol>
+<div class="crit">
+<div><h4>Limits</h4><ul><li>Course data; no live refresh or row-level security configured</li></ul></div>
+<div><h4>If I did it again</h4><ul><li>Add row-level security and a scheduled refresh in Power BI Service</li></ul></div>
+</div></div></details>
+</article><article class="proj" id="justice-survey">
+<div class="phead"><span class="tag">E · Excel</span><h3>How 548 students see crime and punishment</h3><p class="sub">Descriptive stats on a 548-person class survey, choosing the right summary for each variable.</p></div>
+<div class="pbody"><div class="pleft">
+<div class="findings"><div class="fd"><div class="fv">34.4%</div><div class="fl">of 546 respondents were undecided voters, the largest single group</div></div><div class="fd"><div class="fv">4.03 (SD 1.11)</div><div class="fl">mean punitiveness on a 1–7 scale; skewness 0.04, close to normal</div></div><div class="fd"><div class="fv">3.44</div><div class="fl">skewness of age; median 20 is the better centre than the mean of 22.05</div></div></div>
+<p class="take"><span class="tk">What I found</span>Age was heavily skewed by a few older students, so I reported the <b>median (20)</b> instead of the mean (22).</p>
+<p class="stack"><span>Excel</span> <span>Descriptive statistics</span> <span>Survey data</span></p>
+</div><div class="pright"><figure class="panel chart "><figcaption class="ct">Voting preference (n = 546)</figcaption><div class="cbox"><canvas id="ch-justice-survey-0" role="img" aria-label="Voting preference (n = 546)"></canvas></div><p class=cc>Frequency table rebuilt from the class dataset. Source: 2009CCJ class dataset, Q35.</p></figure></div></div>
+<details class="more"><summary>Read the full write-up</summary><div class="morein">
+<dl class="meta"><div><dt>Course</dt><dd>2009CCJ Criminology research methods · Trimester 1, 2026</dd></div><div><dt>My role</dt><dd>Research logs: analysis and APA-style write-up</dd></div><div><dt>Data</dt><dd>Class survey on crime, policing and punishment attitudes · 549 rows × 115 variables</dd></div></dl>
+<h4>The question</h4><p>Before testing any relationships, what do students&#x27; voting preferences, punitive attitudes and ages actually look like, and which summary numbers describe them honestly?</p>
+<h4>What I did</h4><ol class="steps"><li>Built a frequency distribution with relative and cumulative shares for voting preference</li><li>Plotted histograms for the punitiveness scale and age and judged each shape before choosing summary statistics</li><li>Ran Excel descriptive statistics: mean, median, mode, SD, skewness, kurtosis</li><li>Explained each statistic in plain language for a non-specialist reader</li></ol>
+<div class="mgrid"><figure class="panel chart "><figcaption class="ct">Punitiveness scale distribution (n = 548)</figcaption><div class="cbox"><canvas id="ch-justice-survey-1" role="img" aria-label="Punitiveness scale distribution (n = 548)"></canvas></div><p class=cc>Histogram rebuilt from the class dataset. Source: 2009CCJ class dataset, Punitiveness Scale.</p></figure></div>
+<div class="crit">
+<div><h4>Limits</h4><ul><li>A single class cohort, not a representative sample of the public</li><li>Descriptive only; no tests of relationships in these logs</li></ul></div>
+<div><h4>If I did it again</h4><ul><li>Test whether fear of crime differs for international students using the grouped scales already prepared</li></ul></div>
+</div></div></details>
+</article><article class="proj" id="xpower-planning">
+<div class="phead"><span class="tag">F · Python</span><h3>A tariff calculator, planned and built in Python</h3><p class="sub">I co-led planning for a four-person team, then wrote the Python bill engine and its tests.</p></div>
+<div class="pbody"><div class="pleft">
+<div class="findings"><div class="fd"><div class="fv">100%</div><div class="fl">branch coverage on the bill engine, 50 of 50 branches</div></div><div class="fd"><div class="fv">17 / 17</div><div class="fl">pytest tests passing, from overnight tariffs to bad CSV rows</div></div><div class="fd"><div class="fv">3</div><div class="fl">tariff models: Flat, Time-of-Use and Tiered</div></div></div>
+<p class="take"><span class="tk">What I found</span>An off-peak period from 9pm to 7am crosses midnight. Writing a test for it is how I <b>caught the bug before the client did</b>.</p>
+<p class="stack"><span>Python</span> <span>pytest</span> <span>coverage.py</span> <span>dataclasses</span> <span>Project planning</span> <span>Risk register</span></p>
+</div><div class="pright"><figure class="code win"><div class="wbar"><i></i><i></i><i></i><span class="fn">xpower.py</span></div><pre><code class="lang-python">def _in_period(t: time, start: time, end: time) -&gt; bool:
+    if start &lt;= end:
+        return start &lt;= t &lt; end
+    return t &gt;= start or t &lt; end
+
+periods = {
+    &quot;peak&quot;: (time(17, 0), time(21, 0), 0.40),
+    &quot;shoulder&quot;: (time(7, 0), time(17, 0), 0.25),
+    &quot;off&quot;: (time(21, 0), time(7, 0), 0.15),   # crosses midnight
+}</code></pre><figcaption class="cc">Handling a time-of-use period that runs past midnight</figcaption></figure></div></div>
+<details class="more"><summary>Read the full write-up</summary><div class="morein">
+<dl class="meta"><div><dt>Course</dt><dd>Software project · Trimester 2, 2025</dd></div><div><dt>Team</dt><dd>4 people</dd></div><div><dt>My role</dt><dd>Co-led the planning phase: WBS and dictionary, project schedule and risk register</dd></div><div><dt>Data</dt><dd>Household electricity usage files · CSV with timestamp and kWh columns</dd></div></dl>
+<h4>The question</h4><p>Households can&#x27;t easily tell which electricity tariff suits them. The client wanted a web prototype that imports usage data and compares bills under three tariff models, in five weeks and within $10,000.</p>
+<h4>What I did</h4><ol class="steps"><li>Defined scope and requirements with the team: CSV/Excel import, bill engine for Flat, Time-of-Use and Tiered tariffs, charts and reports, admin tariff management</li><li>Broke the work into a WBS with a dictionary giving each package a deliverable and acceptance criteria</li><li>Built the schedule as a Gantt chart with durations and dependencies</li><li>Wrote the risk register, rating impact and likelihood and assigning a mitigation to each risk</li><li>Wrote the bill engine in Python: a CSV loader that accepts two timestamp formats, plus Flat, Time-of-Use and Tiered bill functions returning a Bill dataclass</li><li>Validated every input (types, negatives, empty tariffs, times not covered by any period) and raised clear errors</li><li>Wrote 17 pytest tests, including overnight off-peak periods and malformed CSV files, and measured coverage with coverage.py</li></ol>
+<div class="crit">
+<div><h4>Limits</h4><ul><li>Prototype scope only; no production deployment</li><li>Excel import and the web front end were built by teammates</li></ul></div>
+<div><h4>If I did it again</h4><ul><li>Add property-based tests for random usage files</li></ul></div>
+</div></div></details>
+</article><article class="proj" id="tested-code">
+<div class="phead"><span class="tag">G · Python</span><h3>Code that proves it follows the rules</h3><p class="sub">A loan-approval rules engine, tested until every branch was covered.</p></div>
+<div class="pbody"><div class="pleft">
+<div class="findings"><div class="fd"><div class="fv">100%</div><div class="fl">statement coverage, 19 of 19</div></div><div class="fd"><div class="fv">100%</div><div class="fl">branch coverage, 12 of 12 with no partial branches</div></div><div class="fd"><div class="fv">4</div><div class="fl">Bandit findings fixed (B101, B105, B110, B112)</div></div></div>
+<p class="take"><span class="tk">What I found</span>Testing a credit score of 599 against 600 is boring. It's also <b>exactly where rule bugs hide</b>.</p>
+<p class="stack"><span>Python</span> <span>pytest</span> <span>coverage.py</span> <span>Bandit</span></p>
+</div><div class="pright"><figure class="code win"><div class="wbar"><i></i><i></i><i></i><span class="fn">test_loan.py</span></div><pre><code class="lang-python">@pytest.mark.parametrize(
+    &quot;income, credit, amount, years, existing&quot;,
+    [
+        (0,      700, 12000, 12, False),  # invalid income
+        (2000,   599, 12000, 12, False),  # one point below threshold
+        (999.99, 700, 12000, 12, False),  # just unaffordable
+    ],
+)
+def test_approve_loan_rejections(income, credit, amount, years, existing):
+    assert approve_loan(income, credit, amount, years, existing) is None</code></pre><figcaption class="cc">Boundary cases as parametrised tests</figcaption></figure></div></div>
+<details class="more"><summary>Read the full write-up</summary><div class="morein">
+<dl class="meta"><div><dt>Course</dt><dd>Software engineering · 2025</dd></div><div><dt>My role</dt><dd>Sole developer</dd></div><div><dt>Data</dt><dd>Loan rules: validation, credit threshold, affordability, rate discounts and a 3% floor · 19 statements · 12 branches</dd></div></dl>
+<h4>The question</h4><p>Rules like &#x27;reject if credit score is below 600&#x27; are easy to state and easy to get wrong at the boundary. How do you show a business rule is implemented exactly as written?</p>
+<h4>What I did</h4><ol class="steps"><li>Wrote the rules as a single function with a plain-English docstring</li><li>Designed 12 parametrised test cases covering typical cases, boundaries (599, 600, 750) and invalid input</li><li>Measured statement and branch coverage with coverage.py</li><li>Scanned a sample app with Bandit and fixed four findings: assert used for validation, a hard-coded password, and two silently swallowed exceptions</li></ol>
+<div class="crit">
+<div><h4>Limits</h4><ul><li>Workshop-scale code, not a production system</li></ul></div>
+<div><h4>If I did it again</h4><ul><li>Run Bandit and coverage automatically on every commit</li></ul></div>
+</div></div></details>
+</article><article class="proj" id="pews-plates">
+<div class="phead"><span class="tag">H · JavaScript</span><h3>A food guide for my church youth group, in JavaScript</h3><p class="sub">A small web page I built so new church members know where to eat after Mass.</p></div>
+<div class="pbody"><div class="pleft">
+<div class="findings"><div class="fd"><div class="fv">20</div><div class="fl">places stored as structured data, not hard-coded HTML</div></div><div class="fd"><div class="fv">1 file</div><div class="fl">to edit when a place opens or closes: the data, not the page</div></div><div class="fd"><div class="fv">3 → 1</div><div class="fl">grid columns, desktop to phone, with no media queries</div></div></div>
+<p class="take"><span class="tk">What I found</span>I kept the 20 places in a separate data file, so <b>anyone can add a cafe without touching the code</b>.</p>
+<p class="stack"><span>JavaScript</span> <span>HTML</span> <span>CSS</span> <span>DOM</span></p>
+</div><div class="pright"><figure class="shot panel"><div class="imgwrap"><img src="assets/bkcc-guide.jpg" alt="Paddington Pews and Plates page showing cafe cards with category, signature dish, a tip and distance from church" loading="lazy"></div><figcaption class="cc">The page running in a browser, rendered from places.js.</figcaption></figure></div></div>
+<details class="more"><summary>Read the full write-up</summary><div class="morein">
+<dl class="meta"><div><dt>Course</dt><dd>Volunteer, Brisbane Korean Catholic Community · Feb 2026</dd></div><div><dt>My role</dt><dd>Designed and coded it myself</dd></div><div><dt>Data</dt><dd>20 places near the church · name, category, mood, signature dish, tip, distance</dd></div></dl>
+<h4>The question</h4><p>Every week new members asked the same question: where should we eat near the church? The answers lived in group chats and got lost.</p>
+<h4>What I did</h4><ol class="steps"><li>Collected 20 places and stored them as structured records in a separate JavaScript data file</li><li>Wrote a render function that loops over the data and builds a card for each place in the DOM</li><li>Styled it with CSS Grid so the cards reflow from three columns to one on a phone</li><li>Started a second version with live search and category filters</li></ol>
+<div class="mgrid"><figure class="code win"><div class="wbar"><i></i><i></i><i></i><span class="fn">index.html</span></div><pre><code class="lang-javascript">function renderPlaces() {
+    places.forEach(place =&gt; {
+        const card = document.createElement(&#x27;div&#x27;);
+        card.className = &#x27;card&#x27;;
+        card.innerHTML = `
+            &lt;span class=&quot;cat-tag&quot;&gt;${place.category}&lt;/span&gt;
+            &lt;div class=&quot;name&quot;&gt;${place.name}&lt;/div&gt;
+            &lt;span class=&quot;mood&quot;&gt;✨ ${place.mood}&lt;/span&gt;
+            &lt;div class=&quot;youth-tip&quot;&gt;&quot; ${place.youthTip} &quot;&lt;/div&gt;
+            &lt;span class=&quot;dist&quot;&gt;📍 ${place.distance} from Church&lt;/span&gt;
+        `;
+        listContainer.appendChild(card);
+    });
+}</code></pre><figcaption class="cc">Rendering a card for each place from the data file</figcaption></figure></div>
+<div class="crit">
+<div><h4>Limits</h4><ul><li>Static data; nothing updates automatically</li><li>The search and filter version isn&#x27;t finished yet</li></ul></div>
+<div><h4>If I did it again</h4><ul><li>Finish search and filters</li><li>Move the data to a shared sheet so volunteers can edit it</li></ul></div>
+</div></div></details>
+</article>
+</div></section>
+
+<section id="skills" class="sec line"><div class="wrap">
+  <div class="sh"><p class="eyebrow"><span class="cm">//</span> skills</p><h2>Tools I've actually used</h2><p class="shp">Letters link to the project where I used each one.</p></div>
+  <div class="skills"><div class="sg"><h4>Analysis methods</h4><ul><li><span class="sk">Descriptive statistics</span><span class="sn">choosing mean or median by the shape of the data</span><span class="evs"><a class="ev" href="#justice-survey" title="Project E">E</a><a class="ev" href="#study-regression" title="Project C">C</a></span></li><li><span class="sk">Regression</span><span class="sn">least squares, correlation, prediction</span><span class="evs"><a class="ev" href="#study-regression" title="Project C">C</a></span></li><li><span class="sk">Classification</span><span class="sn">decision tree against a baseline</span><span class="evs"><a class="ev" href="#listening-to-fans" title="Project B">B</a></span></li><li><span class="sk">Text mining</span><span class="sn">term frequency, sentiment, LDA topics</span><span class="evs"><a class="ev" href="#listening-to-fans" title="Project B">B</a></span></li><li><span class="sk">Network analysis</span><span class="sn">PageRank, centrality, communities</span><span class="evs"><a class="ev" href="#listening-to-fans" title="Project B">B</a></span></li><li><span class="sk">Root-cause analysis</span><span class="sn">what happened, why, what to do</span><span class="evs"><a class="ev" href="#profit-leakage" title="Project A">A</a><a class="ev" href="#sales-report" title="Project D">D</a></span></li></ul></div><div class="sg"><h4>Languages</h4><ul><li><span class="sk">Python</span><span class="sn">NumPy, SciPy, matplotlib, pytest</span><span class="evs"><a class="ev" href="#study-regression" title="Project C">C</a><a class="ev" href="#xpower-planning" title="Project F">F</a><a class="ev" href="#tested-code" title="Project G">G</a></span></li><li><span class="sk">R</span><span class="sn">dplyr, tidytext, igraph, rpart, ggplot2</span><span class="evs"><a class="ev" href="#listening-to-fans" title="Project B">B</a></span></li><li><span class="sk">DAX</span><span class="sn">measures, YTD time intelligence</span><span class="evs"><a class="ev" href="#profit-leakage" title="Project A">A</a><a class="ev" href="#sales-report" title="Project D">D</a></span></li><li><span class="sk">SQL</span><span class="sn">queries and joins (basics)</span><span class="evs"></span></li><li><span class="sk">JavaScript</span><span class="sn">DOM rendering, HTML and CSS</span><span class="evs"><a class="ev" href="#pews-plates" title="Project H">H</a></span></li></ul></div><div class="sg"><h4>BI and visualisation</h4><ul><li><span class="sk">Power BI</span><span class="sn">Power Query, DAX, star schemas</span><span class="evs"><a class="ev" href="#profit-leakage" title="Project A">A</a><a class="ev" href="#sales-report" title="Project D">D</a></span></li><li><span class="sk">Power Query</span><span class="sn">cleaning, unpivoting, type fixes</span><span class="evs"><a class="ev" href="#profit-leakage" title="Project A">A</a><a class="ev" href="#sales-report" title="Project D">D</a></span></li><li><span class="sk">matplotlib and ggplot2</span><span class="sn">box plots, scatter, trend charts</span><span class="evs"><a class="ev" href="#study-regression" title="Project C">C</a><a class="ev" href="#listening-to-fans" title="Project B">B</a></span></li><li><span class="sk">Excel statistics</span><span class="sn">frequency tables, descriptives</span><span class="evs"><a class="ev" href="#justice-survey" title="Project E">E</a></span></li></ul></div><div class="sg"><h4>Data quality &amp; controls</h4><ul><li><span class="sk">Validation before analysis</span><span class="sn">IDs, duplicates, types</span><span class="evs"><a class="ev" href="#listening-to-fans" title="Project B">B</a><a class="ev" href="#profit-leakage" title="Project A">A</a></span></li><li><span class="sk">Reconciling report totals</span><span class="sn"></span><span class="evs"><a class="ev" href="#sales-report" title="Project D">D</a></span></li><li><span class="sk">Reproducible work</span><span class="sn">fixed seeds, cached data</span><span class="evs"><a class="ev" href="#listening-to-fans" title="Project B">B</a></span></li><li><span class="sk">Secure coding</span><span class="sn">Bandit, secrets in env vars</span><span class="evs"><a class="ev" href="#tested-code" title="Project G">G</a></span></li></ul></div><div class="sg"><h4>Delivery &amp; communication</h4><ul><li><span class="sk">Writing for non-technical readers</span><span class="sn"></span><span class="evs"><a class="ev" href="#profit-leakage" title="Project A">A</a><a class="ev" href="#listening-to-fans" title="Project B">B</a><a class="ev" href="#justice-survey" title="Project E">E</a></span></li><li><span class="sk">Recommendations with monitoring plans</span><span class="sn"></span><span class="evs"><a class="ev" href="#profit-leakage" title="Project A">A</a></span></li><li><span class="sk">WBS, schedules, risk registers</span><span class="sn"></span><span class="evs"><a class="ev" href="#xpower-planning" title="Project F">F</a></span></li><li><span class="sk">Team coordination</span><span class="sn">5-person software team</span><span class="evs"></span></li></ul></div></div>
+</div></section>
+
+<section id="running" class="sec line"><div class="wrap">
+  <div class="sh"><p class="eyebrow"><span class="cm">//</span> side_project</p><h2>I analyse my own running data too</h2><p class="shp">I log every run on Garmin and Strava. Same habits as my coursework: pull the numbers, compare them, decide what to change.</p></div>
+  <div class="runbox">
+    <div class="rkpis"><div class="rk"><span class="rv">3:40:00</span><span class="rl">Marathon</span><span class="rs">Gold Coast, Jul 2026</span></div><div class="rk"><span class="rv">1:43:03</span><span class="rl">Half marathon</span><span class="rs">Sydney, Sep 2026</span></div><div class="rk"><span class="rv">4:41/km</span><span class="rl">Threshold pace</span><span class="rs">Garmin</span></div><div class="rk"><span class="rv">52</span><span class="rl">VO₂ max</span><span class="rs">Garmin</span></div></div>
+    <figure class="panel chart"><figcaption class="ct">Pace check <span class="unit">green = what I've run · black = goal</span></figcaption><div class="cbox"><canvas id="run-pace" role="img" aria-label="Race paces compared with goal paces"></canvas></div>
+      <p class="take sm"><span class="tk">What I took from it</span>A <b>3:29 marathon</b> is close to what I already hold for a half. Sub-3:10 needs a faster threshold first.</p></figure>
+  </div>
+</div></section>
+
+<section class="sec line"><div class="wrap bg2">
+  <div><p class="eyebrow"><span class="cm">//</span> experience</p><ul class="tl"><li class="xp"><span class="xd">Jan 2023 – now</span><div class="xb"><h4>Social Media Marketing Coordinator (Volunteer)</h4><p class="xl">Brisbane Korean Catholic Community</p><p class="xs">Replaced paper announcements with a weekly digital notice, published every week for more than two years</p></div></li><li class="xp"><span class="xd">Oct 2023 – now</span><div class="xb"><h4>Barista / Front of House</h4><p class="xl">Bellissimo Coffee; previously Café Dolce</p><p class="xs">Kept orders accurate and on time in a 15+ person team through high-volume service</p></div></li></ul></div>
+  <div><p class="eyebrow"><span class="cm">//</span> education</p><ul class="tl"><li class="xp"><span class="xd">Jul 2025 – Jul 2027</span><div class="xb"><h4>Bachelor of Information Technology (Data Analytics)</h4><p class="xl">Griffith University</p></div></li><li class="xp"><span class="xd">Mar 2023 – Feb 2024</span><div class="xb"><h4>Diploma of Information Technology</h4><p class="xl">Griffith College</p></div></li></ul></div>
+</div></section>
+
+<section id="contact" class="sec line"><div class="wrap contact">
+  <h2>Hiring a junior data or ICT person for August 2027?</h2>
+  <p class="lede">I'd love to hear from you.</p>
+  <div class="mail"><span class="addr"><span class="pr">$</span> <span id="addr">hannah.hong2@griffithuni.edu.au</span></span><button type="button" class="btn pri" id="copy">Copy email</button><a class="btn" href="https://www.linkedin.com/in/hannah-hong-b89993429/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+  <p class="small">Brisbane, QLD · Updated October 2026</p>
+</div></section>
+</main>
+<script id="chart-data" type="application/json">[{"id": "run-pace", "type": "hbar", "title": "Pace check", "labels": ["Sub-3:10 goal", "Threshold pace", "Half race pace", "3:29 goal", "Marathon race pace"], "datasets": [{"label": "min/km", "data": [270, 281, 293, 297, 313]}], "pace": true, "hl": [0, 3]}, {"type": "bar", "title": "Sales grew, margin stayed flat", "labels": ["2014", "2015", "2016", "2017"], "datasets": [{"label": "Sales ($K)", "data": [484, 471, 609, 733]}, {"label": "Profit margin (%)", "type": "line", "yAxisID": "y1", "data": [10.2, 13.1, 13.4, 12.7], "color": "--accent"}], "y_label": "Sales ($K)", "y2_label": "Margin (%)", "caption": "Figure 1 of the report, rebuilt from its values.", "source": "2030AFE report, Figure 1", "id": "ch-profit-leakage-0"}, {"type": "bar", "signed": true, "title": "Profit by discount band ($K)", "labels": ["0%", "1–20%", "21–40%", "41–80%"], "datasets": [{"label": "Profit ($K)", "data": [321.0, 100.8, -35.8, -99.6]}], "y_label": "Profit ($K)", "prefix": "$", "suffix": "K", "caption": "Margins by band: 29.5%, 11.9%, -15.3%, -77.4%.", "source": "2030AFE report, Figure 3", "id": "ch-profit-leakage-1"}, {"type": "hbar", "signed": true, "title": "Six largest loss-making states ($K)", "labels": ["Texas (37% avg discount)", "Ohio (32%)", "Pennsylvania (33%)", "Illinois (39%)", "North Carolina (28%)", "Colorado (32%)"], "datasets": [{"label": "Profit ($K)", "data": [-25.7, -17.0, -15.6, -12.6, -7.5, -6.5]}], "x_label": "Profit ($K)", "prefix": "$", "suffix": "K", "caption": "Combined loss of $84.9K.", "source": "2030AFE report, Figure 4", "id": "ch-profit-leakage-2"}, {"type": "hbar", "stacked": true, "title": "Comment polarity by artist (%)", "labels": ["Taylor Swift", "Olivia Rodrigo", "Billie Eilish"], "datasets": [{"label": "Positive", "data": [44.6, 42.9, 35.3]}, {"label": "Neutral", "data": [38.6, 35.1, 40.2], "color": "--data2"}, {"label": "Negative", "data": [16.8, 22.0, 24.5], "color": "--accent"}], "x_label": "Share of comments (%)", "suffix": "%", "caption": "syuzhet polarity on comments with emojis converted to words.", "source": "Big Data report, section 9", "id": "ch-listening-to-fans-0"}, {"type": "bar", "title": "Repeat commenting: comments per unique account", "labels": ["Taylor Swift", "Olivia Rodrigo", "Billie Eilish"], "datasets": [{"label": "Comments per account", "data": [1.29, 1.24, 1.19]}], "y_label": "Comments per account", "caption": "A ratio near 1 means a broadcast audience rather than a community.", "source": "Big Data report, section 4", "id": "ch-listening-to-fans-1"}, {"type": "scatter", "title": "Hours studied vs marks, with fitted line", "datasets": [{"label": "Students", "data": [{"x": 7, "y": 65}, {"x": 12, "y": 82}, {"x": 8, "y": 93}, {"x": 10, "y": 95}, {"x": 2, "y": 40}, {"x": 3, "y": 35}, {"x": 4, "y": 50}, {"x": 4, "y": 37}, {"x": 6, "y": 60}, {"x": 6, "y": 72}, {"x": 9, "y": 85}, {"x": 7, "y": 73}]}, {"label": "y = 6.38x + 24.14", "type": "line", "data": [{"x": 1, "y": 30.51}, {"x": 13, "y": 107.03}], "color": "--neg"}], "x_label": "Hours studied per week", "y_label": "Mark", "caption": "Rebuilt from the lab data. R² = 0.78, n = 12.", "source": "lab10.py", "id": "ch-study-regression-0"}, {"type": "bar", "title": "Voting preference (n = 546)", "labels": ["Undecided", "Labour", "Greens", "LNP", "Other"], "datasets": [{"label": "Respondents", "data": [188, 151, 133, 60, 14]}], "y_label": "Respondents", "caption": "Frequency table rebuilt from the class dataset.", "source": "2009CCJ class dataset, Q35", "id": "ch-justice-survey-0"}, {"type": "bar", "title": "Punitiveness scale distribution (n = 548)", "labels": ["1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0", "4.5", "5.0", "5.5", "6.0", "6.5"], "datasets": [{"label": "Respondents", "data": [2, 13, 31, 44, 57, 105, 94, 82, 64, 32, 13, 11]}], "x_label": "Scale score (bin start, width 0.5)", "y_label": "Respondents", "caption": "Histogram rebuilt from the class dataset.", "source": "2009CCJ class dataset, Punitiveness Scale", "histogram": true, "id": "ch-justice-survey-1"}]</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>(function(){
+  var root=document.documentElement;
+  
+  var tb=document.getElementById('theme');
+  if(tb)tb.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    var dark=cur?cur==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+    var next=dark?'light':'dark';root.setAttribute('data-theme',next);
+    try{localStorage.setItem('pf-theme',next);}catch(e){}
+    drawCharts();
+  });
+  var cp=document.getElementById('copy');
+  if(cp)cp.addEventListener('click',function(){
+    var a=document.getElementById('addr').textContent;
+    var done=function(){cp.textContent='Copied';setTimeout(function(){cp.textContent='Copy email';},1600);};
+    var sel=function(){var r=document.createRange();r.selectNodeContents(document.getElementById('addr'));var s=getSelection();s.removeAllRanges();s.addRange(r);cp.textContent='Press Ctrl+C';};
+    try{navigator.clipboard.writeText(a).then(done,sel);}catch(e){sel();}
+  });
+  var specs=[];try{specs=JSON.parse(document.getElementById('chart-data').textContent);}catch(e){}
+  var made=[];
+  function v(n){return getComputedStyle(root).getPropertyValue(n).trim();}
+  function mmss(s){s=Math.round(s);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}
+  function drawCharts(){
+    if(!window.Chart||!specs.length)return;
+    made.forEach(function(c){c.destroy();});made=[];
+    var pal=[v('--d1'),v('--d2'),v('--d3')],fg=v('--muted'),grid=v('--line'),neg=v('--neg');
+    Chart.defaults.font.family=v('--sans');Chart.defaults.color=fg;
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    specs.forEach(function(s){
+      var el=document.getElementById(s.id);if(!el)return;
+      if(!el.dataset.seen&&'IntersectionObserver' in window&&!reduce){watch(el,function(){el.dataset.seen=1;drawOne(s,el);});return;}
+      drawOne(s,el);
+    });
+  }
+  function drawOne(s,el){
+    var pal=[v('--d1'),v('--d2'),v('--d3')],fg=v('--muted'),grid=v('--line'),neg=v('--neg');
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    {
+      if(s.pace||s.hrline){
+        // dot plot: values compared on a shared axis without a misleading bar baseline
+        var d=s.datasets[0].data, cols=d.map(function(x,i){
+          if(s.pace)return (s.hl||[]).indexOf(i)>=0?'#111111':v('--d2');
+          return i===0?'#111111':(x>s.hrline?v('--green'):v('--green2'));});
+        var ch=(new Chart(el,{type:'line',data:{labels:s.labels,datasets:[{label:s.datasets[0].label,data:d,showLine:false,pointRadius:9,pointHoverRadius:11,pointBackgroundColor:cols,pointBorderColor:v('--surface'),pointBorderWidth:2}]},
+          options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,animation:reduce?false:{duration:1100,easing:'easeOutCubic'},animations:reduce?{}:{x:{from:260,duration:1100,easing:'easeOutCubic'}},layout:{padding:{right:12}},
+            plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return s.pace?mmss(c.parsed.x)+' /km':c.parsed.x+' bpm';}}}},
+            scales:{x:{min:s.pace?260:170,max:s.pace?320:195,grid:{color:grid},ticks:{color:fg,stepSize:s.pace?10:5,callback:function(x){return s.pace?mmss(x):x;}},title:{display:true,text:s.pace?'Pace (min:sec per km), faster to the left':'Average heart rate (bpm)'}},
+                    y:{grid:{display:false},ticks:{color:v('--fg'),font:{weight:'500'}}}}}}));
+        made.push(ch);if(obsMap.get(el))obsMap.get(el).chart=ch;
+        return;
+      }
+      var type=s.type==='hbar'?'bar':s.type;
+      var ds=(s.datasets||[]).map(function(d,i){var c=d.color?(d.color.charAt(0)==='-'?v(d.color==='--accent'?'--neg':d.color==='--data2'?'--d3':d.color):d.color):pal[i%pal.length];
+        var dt=d.type||type, bg=(type==='scatter'&&dt!=='line')?c+'cc':c; if(s.signed&&dt==='bar'){bg=(d.data||[]).map(function(x){return x<0?neg:c;});}
+        return Object.assign({},d,{backgroundColor:bg,borderColor:c,borderWidth:dt==='line'?2.5:0,pointRadius:type==='scatter'?(dt==='line'?0:7):(dt==='line'?4:0),showLine:dt==='line',pointHoverRadius:type==='scatter'?9:4,pointBackgroundColor:c,tension:.3,borderRadius:type==='bar'&&!s.histogram?6:0,categoryPercentage:s.histogram?1:.75,barPercentage:s.histogram?.96:.85});});
+      var sc={x:{stacked:!!s.stacked,grid:{color:grid,display:s.type==='hbar'},title:{display:!!s.x_label,text:s.x_label||''},ticks:{color:fg}},
+              y:{stacked:!!s.stacked,grid:{color:grid,display:s.type!=='hbar'},title:{display:!!s.y_label,text:s.y_label||''},ticks:{color:fg},beginAtZero:true}};
+      if(ds.some(function(d){return d.yAxisID==='y1';})){sc.y1={position:'right',beginAtZero:true,grid:{display:false},ticks:{color:fg},title:{display:!!s.y2_label,text:s.y2_label||''}};}
+      var ch2=(new Chart(el,{type:type,data:{labels:s.labels,datasets:ds},options:{responsive:true,maintainAspectRatio:false,indexAxis:s.type==='hbar'?'y':'x',
+        animation:reduce?false:{duration:1200,easing:'easeOutCubic'},
+        plugins:{legend:{display:ds.length>1,labels:{boxWidth:10,usePointStyle:true,color:fg}},tooltip:{callbacks:{label:function(ctx){var val=ctx.parsed[s.type==='hbar'?'x':'y'];return (ctx.dataset.label?ctx.dataset.label+': ':'')+(s.prefix||'')+val+(s.suffix||'');}}}},scales:sc}}));
+      made.push(ch2);if(obsMap.get(el))obsMap.get(el).chart=ch2;
+    }
+  }
+  var obsMap=new Map(),io=('IntersectionObserver' in window)?new IntersectionObserver(function(en){en.forEach(function(x){var f=obsMap.get(x.target);if(!f)return;if(x.isIntersecting){if(!f.done){f.done=1;f.cb();}else if(f.chart){f.chart.reset();f.chart.update();}}});},{threshold:.35}):null;
+  function watch(el,cb){obsMap.set(el,{cb:cb});io.observe(el);}
+  if(document.readyState==='complete')drawCharts();else window.addEventListener('load',drawCharts);
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change',drawCharts);
+})();
+
+(function(){
+  // One runner per lane; only the lane that is displayed gets animated.
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,start=performance.now();
+  var lanes=[].slice.call(document.querySelectorAll('.lane-h,.lane-v')).map(function(l){
+    return {el:l,r:l.querySelector('.runner'),odo:l.querySelector('.odo'),v:l.classList.contains('lane-v'),p:16,dir:1,lastPuff:0};});
+  function place(L){
+    if(L.v)L.r.style.transform='translateY('+L.p+'px)';
+    else L.r.style.transform='translateX('+L.p+'px) scaleX('+L.dir+')';
+  }
+  lanes.forEach(place);
+  if(reduce)return;
+  var last=0;
+  function step(t){
+    if(!last)last=t;var dt=Math.min(.05,(t-last)/1000);last=t;
+    lanes.forEach(function(L){
+      if(!L.el.offsetParent&&getComputedStyle(L.el).position!=='fixed')return;
+      if(getComputedStyle(L.el).display==='none')return;
+      var size=L.v?L.el.clientHeight-170:L.el.clientWidth-34;
+      L.p+=L.dir*78*dt;
+      if(L.p>size){L.p=size;L.dir=-1;}if(L.p<4){L.p=4;L.dir=1;}
+      place(L);
+      if(t-L.lastPuff>260){L.lastPuff=t;var pf=document.createElement('span');pf.className='puff';
+        if(L.v)pf.style.top=(L.p+(L.dir>0?2:40))+'px';else pf.style.left=(L.p+(L.dir>0?4:22))+'px';
+        L.el.appendChild(pf);setTimeout(function(){pf.remove();},750);}
+      if(L.odo)L.odo.textContent=(((t-start)/1000)/281).toFixed(2)+' km at 4:41/km';
+    });
+    requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+})();
+
+(function(){
+  // Every big number on the page counts up from 0 to its real value when it scrolls into view,
+  // then repeats every 10 s while it stays visible. The real value is in the HTML, so the page
+  // reads correctly with no script or with reduced motion.
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
+  var NUM=/\d[\d,]*(?:\.\d+)?/g, TIME=/^(\d+):(\d{2})(?::(\d{2}))?/;
+  function parse(txt){
+    var tm=txt.match(TIME);
+    if(tm){var secs=tm[3]!==undefined?(+tm[1])*3600+(+tm[2])*60+(+tm[3]):(+tm[1])*60+(+tm[2]);
+      return {time:true,hms:tm[3]!==undefined,secs:secs,rest:txt.slice(tm[0].length)};}
+    var parts=[],last=0,m;NUM.lastIndex=0;
+    while((m=NUM.exec(txt))){parts.push({lit:txt.slice(last,m.index)});var n=m[0];
+      parts.push({num:parseFloat(n.replace(/,/g,'')),dec:(n.split('.')[1]||'').length,comma:n.indexOf(',')>=0});last=m.index+n.length;}
+    parts.push({lit:txt.slice(last)});
+    return parts.length>1?{parts:parts}:null;
+  }
+  function p2(n){return String(n).padStart(2,'0');}
+  function fmt(it,e){
+    if(it.p.time){var s=Math.round(it.p.secs*e);
+      return (it.p.hms?Math.floor(s/3600)+':'+p2(Math.floor(s%3600/60))+':'+p2(s%60):Math.floor(s/60)+':'+p2(s%60))+it.p.rest;}
+    return it.p.parts.map(function(q){if(q.lit!==undefined)return q.lit;var s=(q.num*e).toFixed(q.dec);
+      if(q.comma){var a=s.split('.');a[0]=a[0].replace(/\B(?=(\d{3})+(?!\d))/g,',');s=a.join('.');}return s;}).join('');
+  }
+  var els=[].slice.call(document.querySelectorAll('.stats .hv,.fv,.rv,.kv,.gv'));
+  var items=[];
+  els.forEach(function(el){
+    if(el.children.length)return;
+    var txt=el.textContent.trim(),p=parse(txt);if(!p)return;
+    items.push({el:el,p:p,final:txt,vis:false,timer:null,raf:0});
+  });
+  function run(it){
+    var t0=performance.now(),dur=1500;cancelAnimationFrame(it.raf);
+    it.el.classList.add('counting');
+    (function f(t){var k=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-k,3);
+      it.el.textContent=k<1?fmt(it,e):it.final;
+      if(k<1)it.raf=requestAnimationFrame(f);else it.el.classList.remove('counting');})(t0);
+  }
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){var it=x.target._ct;if(!it)return;
+    it.vis=x.isIntersecting;
+    if(it.vis){run(it);clearInterval(it.timer);it.timer=setInterval(function(){if(it.vis&&!document.hidden)run(it);},10000);}
+    else{clearInterval(it.timer);it.timer=null;}});},{threshold:.6});
+  items.forEach(function(it){it.el._ct=it;io.observe(it.el);});
+})();
+
+try{if(window.hljs){document.querySelectorAll('pre code').forEach(function(el){var l=(el.className.match(/lang-(\w+)/)||[])[1];if(l)el.classList.add('language-'+l);hljs.highlightElement(el);});}}catch(e){}
+
+(function(){
+  // type the hero greeting once on load
+  var el=document.getElementById('typed');if(!el||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var t=el.dataset.text,i=0;el.textContent='';
+  (function k(){el.textContent=t.slice(0,++i);if(i<t.length)setTimeout(k,55+Math.random()*50);})();
+})();
+</script>
+
+</body></html>
